@@ -1,0 +1,25 @@
+name: Manual deployment
+on:
+  workflow_dispatch:
+    inputs:
+      command:
+        type: choice
+        options: [plan, apply, destroy]
+        default: plan
+        required: true
+      environments:
+        type: choice
+        options: [dev, prod]
+        default: dev
+        required: true
+permissions:
+  contents: read
+jobs:
+  deploy:
+    uses: ci-sourcerer/stacksmith/.github/workflows/stacksmith-gitops-opinionated-reusable.yml@d9f516984f5fffc388d31c0950a41b521602dec2
+    with:
+      command: ${{ inputs.command }}
+      environments: ${{ inputs.environments }}
+      gitops_root: .
+      discovery_mode: env-files
+    secrets: inherit

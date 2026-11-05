@@ -1,0 +1,5 @@
+.stacksmith*/
+.terraform*/
+*.tfstate*
+.env
+*.tfplan
