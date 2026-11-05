@@ -2,7 +2,7 @@ configs:
   - source: git
     data:
       repo: https://github.com/ci-sourcerer/stacksmith-example-platform.git
-      ref: 4fdebabe0155c5206485a2ed08091fefc1416c6e
+      ref: 521dc57bc963b8d46f6391e78cb423ea1fa3bf5e
       path: stacksmith-config.yaml
   - source: local
     data:
