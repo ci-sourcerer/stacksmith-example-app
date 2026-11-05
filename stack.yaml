@@ -1,0 +1,6 @@
+name: "example-{{ inputs.environment }}"
+components:
+  storage:
+    type: private_bucket
+    properties:
+      bucket_name: "{{ inputs.bucket_name }}"

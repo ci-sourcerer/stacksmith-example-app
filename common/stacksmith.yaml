@@ -1,0 +1,13 @@
+configs:
+  - source: git
+    data:
+      repo: https://github.com/ci-sourcerer/stacksmith-example-platform.git
+      ref: 4fdebabe0155c5206485a2ed08091fefc1416c6e
+      path: stacksmith-config.yaml
+  - source: local
+    data:
+      path: ../backend.yaml
+stacks:
+  - source: local
+    data:
+      path: ../stack.yaml
